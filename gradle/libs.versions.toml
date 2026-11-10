@@ -1,0 +1,25 @@
+[versions]
+agp = "8.7.2" # Или оставьте вашу версию 8.9.2, если она работает
+kotlin = "2.0.21"
+coreKtx = "1.13.1" # Откат с 1.19.1 (исправляет ошибки 2, 3, 4, 5)
+junit = "4.13.2"
+junitVersion = "1.2.1" # Стабильная версия
+espressoCore = "3.6.1" # Стабильная версия
+appcompat = "1.7.0" # Откат с 1.8.0 (стабильная версия)
+material = "1.12.0" # Откат с 1.14.0 (стабильная версия)
+activity = "1.9.3" # Откат с 1.13.0 (исправляет ошибку 1)
+constraintlayout = "2.1.4" # Откат с 2.2.2 (стабильная версия)
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
